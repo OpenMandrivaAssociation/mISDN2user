@@ -1,11 +1,12 @@
-%define	name	mISDNuser
+%define	name	mISDN2user
 %define	version	1.5
-%define libname	%mklibname mISDNuser
+%define libname	%mklibname %{name}
+%define libname_provides %mklibname mISDNuser
 %define	snap	20090602
 %define	release	%mkrel %{snap}.1
 
 Summary:	Modular ISDN (mISDN) libraries and utilities version 2
-Name:		mISDNuser
+Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Group:		System/Configuration/Hardware
@@ -13,6 +14,10 @@ License:	GPL
 URL:		http://www.misdn.org/index.php/Main_Page
 Source0:	http://www.linux-call-router.de/download/lcr-%{version}/mISDNuser_%{snap}.tar.gz
 Epoch:		2
+Provides:	mISDN = %{epoch}:%{version}-%{release}
+Provides:	mISDN2 = %{epoch}:%{version}-%{release}
+Provides:       mISDNuser = %{epoch}:%{version}-%{release}
+Provides:       misdnuser = %{epoch}:%{version}-%{release}
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
@@ -26,6 +31,7 @@ the cool HFCmulti chip based cards
 Summary:	Modular ISDN (mISDN) libraries
 Group:		System/Libraries
 Epoch:		%{epoch}
+Provides:	%{libname_provides} = %{epoch}:%{version}-%{release}
 
 %description -n	%{libname}
 Modular ISDN (mISDN) is the new ISDN stack of the linux kernel
