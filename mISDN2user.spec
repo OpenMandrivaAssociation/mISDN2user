@@ -3,7 +3,7 @@
 %define libname	%mklibname %{name}
 %define libname_provides %mklibname mISDNuser
 %define	snap	20090602
-%define	release	%mkrel %{snap}.1
+%define	release	%mkrel %{snap}.2
 
 Summary:	Modular ISDN (mISDN) libraries and utilities version 2
 Name:		%{name}
