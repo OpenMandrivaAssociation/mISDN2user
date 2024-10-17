@@ -11,7 +11,7 @@ Version:	%{version}
 Release:	%{release}
 Group:		System/Configuration/Hardware
 License:	GPL
-URL:		http://www.misdn.org/index.php/Main_Page
+URL:		https://www.misdn.org/index.php/Main_Page
 Source0:	http://www.linux-call-router.de/download/lcr-%{version}/mISDNuser_%{snap}.tar.gz
 Epoch:		2
 Provides:	mISDN = %{epoch}:%{version}-%{release}
