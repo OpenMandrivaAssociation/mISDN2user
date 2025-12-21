@@ -20,6 +20,7 @@ Provides:       mISDNuser = %{epoch}:%{version}-%{release}
 Provides:       misdnuser = %{epoch}:%{version}-%{release}
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
+BuildRequires:	make
 %description
 mISDN supports a complete BRI and PRI ETSI compliant DSS1 protocol stack for 
 the TE mode and for the NT mode. It is the successor of the "old" isdn4linux 
